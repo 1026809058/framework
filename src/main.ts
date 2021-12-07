@@ -10,9 +10,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import { setupStore } from './store/index'
-
+import globa from './components/globalComponents'
 ;async () => {
   const app = createApp(App)
+  //全局组件注册
+  globa(app)
   //vuex
   setupStore(app)
   await router.isReady()

@@ -11,7 +11,6 @@ import { createStore } from 'vuex'
 import { MODULES } from '../types/store'
 
 const modulesList = import.meta.globEager('./modules/*.ts')
-console.log(99999, modulesList)
 
 const modules: MODULES = {}
 for (const key in modulesList) {
